@@ -10,6 +10,10 @@ a {
   text-decoration: none;
   color: #333;
 }
+
+li {
+  list-style-type: none;
+}
 /* Header styles */
 
 header {
@@ -33,32 +37,99 @@ header {
   justify-content: space-between;
 }
 
-#navi-1 ul,
 #navi-2 ul {
   margin: auto;
 }
 
-#navi-1 li,
 #navi-2 li {
-  list-style-type: none;
   padding: 5px;
   margin: 1px 10px;
-}
-
-#navi-1 a {
-  font-size: 24px;
 }
 
 #navi-2 a {
   font-size: 16px;
 }
 
-#navi-1 a:hover {
+#navi-2 a:hover {
   color: #c00;
 }
 
-#navi-2 a:hover {
+/* drop downs */
+
+.drop-downs {
+  font-size: 24px;
+  cursor: pointer;
+  padding: 0 10px;
+}
+
+.drop-downs:hover {
   color: #c00;
+}
+
+.drop-down-content {
+  display: none;
+  background: #dcdee0;
+  width: 100%;
+  font-size: 16px;
+}
+
+#explore:hover #explore-drop-down,
+#fly:hover #fly-drop-down,
+#prepare:hover #prepare-drop-down,
+#book:hover #book-drop-down {
+  display: flex;
+  position: absolute;
+  top: 35px;
+  left: 0;
+  z-index: 1;
+  margin: 20px 0;
+  transition: all 1s ease;
+}
+.drop-down-content a,
+.drop-down-content small {
+  color: #5c5c5b;
+}
+
+.drop-down-content a {
+  margin: 0 1px;
+  background: #dcdee0;
+}
+
+.drop-down-content a:hover {
+  color: #c00;
+  background: #f2f2f2;
+}
+
+.drop-down-content > div {
+  width: 30%;
+  align-items: center;
+  justify-content: center;
+}
+
+#navi-1 h4 {
+  color: #333;
+}
+
+.drop-down-button {
+  background: #c00;
+  color: #fff;
+  width: 180px;
+  text-align: center;
+  padding: 10px 0px;
+  cursor: pointer;
+}
+
+.drop-down-button:hover {
+  background: #d00;
+}
+
+.drop-down-content ul {
+  background: #dcdee0;
+  width: 30%;
+}
+
+.drop-down-content ul:hover {
+  background: #e8e8e8;
 }
 
 /* Body styles */
@@ -275,7 +346,6 @@ hr {
 /* fotter */
 
 #bottom-navigation li {
-  list-style-type: none;
   font-size: 16px;
   margin: 0;
   padding: 0;
@@ -308,7 +378,6 @@ hr {
 }
 
 #social li {
-  list-style-type: none;
   padding: 10px 15px;
   margin: 5px 10px;
   background: #f2f2f2;
@@ -333,7 +402,6 @@ hr {
 }
 
 #links li {
-  list-style-type: none;
   font-size: 14px;
   padding: 10px;
 }

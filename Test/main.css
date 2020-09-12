@@ -1,0 +1,43 @@
+li {
+  list-style-type: none;
+}
+
+nav {
+  background: #ccc;
+  height: auto;
+}
+
+#navigation-bar {
+  display: flex;
+  justify-content: space-around;
+}
+
+#one,
+#two,
+#three {
+  background: #cc0;
+  padding: 10px 30px;
+}
+
+.drop-down-content {
+  display: none;
+}
+
+#one:hover {
+  background: #cd0;
+  cursor: pointer;
+}
+
+#one:hover #one-drop-down {
+  display: flex;
+}
+
+#two:hover {
+  background: #cd0;
+  cursor: pointer;
+}
+
+#three:hover {
+  background: #cd0;
+  cursor: pointer;
+}
