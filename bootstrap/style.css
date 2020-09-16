@@ -1,0 +1,261 @@
+/* common modifications */
+
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: Helvetica;
+}
+img {
+  opacity: 0.9;
+}
+
+/* header */
+
+header {
+  border-bottom: 1px solid #e8e6e1;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+header li {
+  list-style-type: none;
+}
+
+.nav-link {
+  color: #333;
+  font-size: 24px;
+}
+
+#user-acc-nav a {
+  color: #333;
+  font-size: 16px;
+}
+
+#main-nav a:hover,
+#user-acc-nav a:hover {
+  color: #c00;
+  text-decoration: none;
+}
+
+#swiss-big-logo {
+  height: 75%;
+  width: 40px;
+}
+
+/* dropdown design */
+#main-nav {
+  position: static;
+}
+
+.custom-dropdown-content {
+  display: none;
+  background: #dcdee0;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+}
+
+.dropdown-col a {
+  color: #333;
+}
+
+/* hover to dropdown */
+.custom-dropdown-link:hover .custom-dropdown-content {
+  display: flex;
+  z-index: 5;
+}
+
+.dropdown-button {
+  background: #c00;
+  color: #fff;
+  padding: 10px;
+  width: 70%;
+  cursor: pointer;
+  text-align: center;
+}
+
+.dropdown-col a {
+  padding-bottom: 1px;
+}
+
+/* intro */
+
+#intro-left h1 {
+  font-size: 64px;
+  color: #c00;
+}
+
+#intro-left p {
+  font-size: 24px;
+  color: #333;
+}
+
+#intro-right {
+  padding: 10px 100px;
+  text-align: center;
+}
+.intro-right-button {
+  background: #333;
+  color: #fff;
+  font-size: 16px;
+  align-items: center;
+  cursor: pointer;
+  margin: 10px auto;
+  width: 200px;
+}
+
+.intro-right-button p {
+  align-items: center;
+}
+
+.button-jump:hover {
+  animation: image-jump 0.5s forwards;
+}
+/* dual images */
+
+#dual-images .jump {
+  cursor: pointer;
+  height: 100%;
+  width: auto;
+}
+
+.jump:hover {
+  animation: image-jump 0.5s forwards;
+}
+
+.text-on-image {
+  position: absolute;
+  bottom: 0;
+  left: 25px;
+  color: #ededed;
+  font-size: 32px;
+}
+
+.text-on-image small {
+  font-size: 16px;
+}
+
+#dual-images .row {
+  margin: 50px 0px;
+}
+
+/* dual image card animation */
+@keyframes image-jump {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.05);
+  }
+}
+
+/* tri-card section */
+
+.card-img-top {
+  overflow: hidden;
+}
+
+#tri-card-section .row {
+  padding-top: 30px;
+}
+
+.card-text {
+  font-size: 11px;
+  color: #c00;
+  font-weight: bold;
+}
+
+.card-title {
+  font-size: 24px;
+}
+
+#more-stories {
+  background: #c00;
+  color: #fff;
+  text-align: center;
+  font-size: 20px;
+  width: fit-content;
+  margin: 50px auto;
+  padding: 15px 50px;
+  cursor: pointer;
+}
+
+/* big image slider */
+
+#big-image-slider {
+  position: relative;
+}
+
+.text-on-slider {
+  text-align: center;
+  color: #fff;
+  position: absolute;
+  top: 30%;
+  left: 25%;
+  width: 50%;
+}
+
+#big-image-main-text {
+  font-size: 64px;
+}
+
+#big-image-text {
+  font-size: 24px;
+}
+
+#explore-button {
+  background: #fff;
+  font-size: 18px;
+  color: #333;
+  width: min-content;
+  margin: auto;
+  padding: 10px 50px;
+  cursor: pointer;
+}
+
+/* footer */
+
+#bottom-nav {
+  margin: 10px 30px;
+}
+
+footer li {
+  list-style-type: none;
+}
+
+footer h6 {
+  font-size: 14px;
+}
+
+footer a {
+  color: #8f8f8f;
+  font-size: 16px;
+}
+
+#bottom-nav a:hover {
+  color: #a1a1a1;
+  text-decoration: none;
+}
+
+#social span:hover {
+  cursor: pointer;
+}
+
+#social {
+  padding: 10px 0px;
+  margin: 10px;
+}
+
+/* last footer links */
+
+#links a {
+  font-size: 14px;
+}
+
+#links a:hover {
+  color: #c00;
+  text-decoration: none;
+}
