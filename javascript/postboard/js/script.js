@@ -9,11 +9,13 @@ class CustomPost {
   postDivision = document.createElement("div");
   postHeadDivision = document.createElement("div");
   postBodyDivision = document.createElement("div");
-  commentDivision = document.createElement("div");
   likeDivision = document.createElement("div");
   likeImage = document.createElement("img");
-  commentImage = document.createElement("img");
   likeCount = document.createElement("p");
+  commentSection = document.createElement("div");
+  commentInput = document.createElement("div");
+  postComment = document.createElement("div");
+  commentText = document.createElement("input");
 
   constructor(postContent) {
     this.postContent = postContent;
@@ -26,9 +28,7 @@ class CustomPost {
   createHtmlElement() {
     // adding image attributes
     this.likeDivision.className = "like";
-    this.commentDivision.className = "comment";
     this.likeImage.src = "assets/like.png";
-    this.commentImage.src = "assets/comment.png";
 
     // post head attributes
     this.postHeadDivision.className = "post-head";
@@ -41,35 +41,74 @@ class CustomPost {
     this.likeCount.className = "number";
     this.postBodyDivision.className = "post-body";
     this.postBodyDivision.appendChild(this.likeDivision);
-    this.postBodyDivision.appendChild(this.commentDivision);
     this.likeDivision.appendChild(this.likeCount);
     this.likeDivision.appendChild(this.likeImage);
-    this.commentDivision.appendChild(this.commentImage);
 
-    // post
     this.postDivision.className = "post";
     this.postDivision.appendChild(this.postHeadDivision);
     this.postDivision.appendChild(this.postBodyDivision);
+
+    // post comments attributes
+    this.commentText.type = "text";
+    this.commentText.placeholder = "Comments";
+    this.commentText.classList = ["comment-text"];
+    this.postComment.classList = ["post-comments zoom-element"];
+    this.postComment.innerHTML = "Post Comment";
+    this.commentInput.classList = ["comments-input"];
+
+    // comment section
+    this.commentSection.classList = ["comments-section"];
+    this.postDivision.appendChild(this.commentSection);
+
+    // comment input
+    this.commentInput.appendChild(this.commentText);
+    this.commentInput.appendChild(this.postComment);
+    this.postDivision.appendChild(this.commentInput);
 
     // parent element
     parrentElement.append(this.postDivision);
   }
 
   postEvenListener() {
-    // likes
+    // elements
     var likeElement = this.postDivision.getElementsByClassName("like");
     var likeImgTages = likeElement[0].getElementsByTagName("img");
+    var postCommentButton = this.postDivision.getElementsByClassName(
+      "post-comments"
+    );
+
+    // likes
     likeImgTages[0].addEventListener("click", () => {
       var likeCounter = this.postDivision.getElementsByClassName("number");
       var number = parseInt(likeCounter[0].innerHTML);
       number += 1;
       likeCounter[0].innerHTML = number;
     });
+
     // comment
-    var commentElement = this.postDivision.getElementsByClassName("comment");
-    var commentImgTages = commentElement[0].getElementsByTagName("img");
-    commentImgTages[0].addEventListener("click", () => {
-      console.log("commenting");
+    postCommentButton[0].addEventListener("click", () => {
+      var commentText = this.postDivision.getElementsByClassName(
+        "comment-text"
+      );
+      if (commentText[0].value !== "") {
+        // displaying comments
+        var commentPostDiv = document.createElement("div");
+        var commentHeadDiv = document.createElement("div");
+
+        commentPostDiv.className = "post";
+        commentHeadDiv.className = "post-head";
+        commentHeadDiv.appendChild(
+          document.createTextNode(commentText[0].value)
+        );
+
+        commentPostDiv.appendChild(commentHeadDiv);
+
+        this.postDivision
+          .getElementsByClassName("comments-section")[0]
+          .appendChild(commentPostDiv);
+
+        commentText[0].value = "";
+      }
     });
   }
 }

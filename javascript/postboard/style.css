@@ -75,11 +75,12 @@ header h1 {
 
 .post-head {
   font-size: 1.5em;
-  border-bottom: solid 0.5px #838a8d;
+
   padding: 10px;
 }
 
 .post-body {
+  border-top: solid 0.5px #838a8d;
   font-size: 0.9em;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -107,27 +108,29 @@ header h1 {
 }
 
 /* comments section */
-
-.comment-section {
-  background-color: #35c1e8;
-  border-radius: 1%;
-  padding: 5px;
-  display: grid;
-  grid-template-columns: 1fr;
-  max-height: 210px;
-  overflow: scroll;
-  margin: 10px 5px;
+.comments-section {
+  font-size: 0.8em;
 }
-.comment-instances {
-  background-color: #e3f9ff;
-  display: block;
-  width: 96%;
-  justify-self: center;
-  text-align: right;
-  padding: 5px;
-  margin: 10px 5px;
-  border-radius: 1%;
-  font-size: 0.9em;
+
+.comments-section img {
+  width: 8%;
+  clip-path: circle();
+  cursor: pointer;
+}
+
+.comments-input {
+  display: flex;
+  justify-content: center;
+}
+.post-comments {
+  background-color: #3cacd6;
+  margin: auto 10px;
+  padding: 4px;
+  font-size: 0.8em;
+  cursor: pointer;
+}
+.comments-input input {
+  width: 70%;
 }
 
 /* add post pop up form */
@@ -173,6 +176,18 @@ header h1 {
 }
 
 /* animation */
+
+.comments-open {
+  visibility: visible;
+  animation: fade 1s forwards;
+  position: static;
+}
+
+.comments-close {
+  visibility: hidden;
+  animation: fade 0.1s reverse forwards;
+  position: absolute;
+}
 
 .open {
   visibility: visible;
