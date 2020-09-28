@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta lang="en" />
+    <title>Post-Board: Home</title>
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <meta name="viewport" content="width=device-width" />
+    <meta charset="utf-8" />
+  </head>
+  <body>
+    <header>
+      <h1>Post Board</h1>
+      <div class="caption">
+        <small>from</small>
+        <strong>neutron</strong>
+      </div>
+    </header>
+    <div id="posts-section">
+      <div></div>
+    </div>
+    <div id="add-post" class="zoom-element">+</div>
+    <div class="close" id="add-post-popup">
+      <input
+        type="text"
+        id="add-post-popup-text"
+        autocomplete="on"
+        maxlength="512"
+        placeholder="Post Content"
+        size="20"
+      />
+      <small id="post-head-empty-error" class="close">
+        Post content can't be empty
+      </small>
+      <div id="post" class="zoom-element"><h4>Post</h4></div>
+      <div id="cancel" class="zoom-element"><h4>Cancel</h4></div>
+    </div>
+
+    <!-- adding javascript link  -->
+    <script src="./js/script.js"></script>
+  </body>
+</html>

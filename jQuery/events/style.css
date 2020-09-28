@@ -1,0 +1,74 @@
+/* Common */
+
+body {
+  font-family: helvetica;
+}
+
+/* header */
+
+header,
+.container {
+  background-color: #d3d4d2;
+  width: 80vw;
+  justify-content: center;
+}
+
+header {
+  display: flex;
+  height: 10vh;
+  text-align: center;
+  margin: 10px auto;
+  align-items: center;
+}
+
+/* playground */
+
+.container {
+  height: 80vh;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 70% 30%;
+}
+
+.container h4 {
+  text-align: center;
+  font-size: 1.5em;
+}
+
+#events,
+#output {
+  background-color: #c3c4c2;
+  width: 80%;
+  height: 80%;
+  justify-self: center;
+  align-self: center;
+}
+
+#events {
+  display: flex;
+}
+
+.button {
+  background-color: #595454;
+  width: 40%;
+  height: 20%;
+  margin: auto;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+  color: #fff;
+}
+
+/* output section */
+#output {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#output h1 {
+  font-size: 3em;
+}
