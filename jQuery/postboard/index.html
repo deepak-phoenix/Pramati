@@ -3,23 +3,27 @@
   <head>
     <meta lang="en" />
     <title>Post-Board: Home</title>
+    <!-- css stylesheet -->
     <link rel="stylesheet" href="style.css" type="text/css" />
     <meta name="viewport" content="width=device-width" />
     <meta charset="utf-8" />
+    <!-- jQuery and javascript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./js/script.js"></script>
   </head>
   <body>
     <header>
       <h1>Post Board</h1>
       <div class="caption">
         <small>from</small>
-        <strong>neutron</strong>
+        <strong>deepakpatel</strong>
       </div>
     </header>
     <div id="posts-section">
       <div></div>
     </div>
     <div id="add-post" class="zoom-element">+</div>
-    <div class="close" id="add-post-popup">
+    <div id="add-post-popup">
       <input
         type="text"
         id="add-post-popup-text"
@@ -28,14 +32,11 @@
         placeholder="Post Content"
         size="20"
       />
-      <small id="post-head-empty-error" class="close">
-        Post content can't be empty
-      </small>
+      <small id="post-head-empty-error"> Post content can't be empty </small>
       <div id="post" class="zoom-element"><h4>Post</h4></div>
-      <div id="cancel" class="zoom-element"><h4>Cancel</h4></div>
+      <div id="cancle" class="zoom-element"><h4>Cancel</h4></div>
     </div>
 
     <!-- adding javascript link  -->
-    <script src="./js/script.js"></script>
   </body>
 </html>
